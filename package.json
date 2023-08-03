@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint **/*.js"
+  },
+  "name": "project2",
+  "description": "[link to project management board](https://github.com/users/Teelsam/projects/1/views/1)",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.46.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.1",
+    "mysql2": "^3.5.2",
+    "sequelize": "^6.32.1"
+  }
+}
