@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "lint": "eslint **/*.js"
   },
   "name": "project2",
@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.46.0"
+    "eslint": "^8.46.0",
+    "nodemon": "^3.0.1"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
