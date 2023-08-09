@@ -39,6 +39,4 @@ router.get('/main', (req, res) => {
    res.render('project');
 });
 
-
-
 module.exports = router;
