@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, HTML } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -58,8 +58,22 @@ router.get('/login', (req, res) => {
 
 
 
-router.get('/main', (req, res) => {
-   res.render('project', {current_page: 'project'});
-});
+router.get('/main', async (req, res) => {
+
+   const htmlData = await HTML.findAll({
+       order: [['cheatSheet_id', 'ASC']],
+   });
+   const htmlResults = htmlData.map((project) => project.get({
+       plain: true,
+       
+   }));
+   console.log('-------------------------------------')
+   console.log(htmlResults);
+   console.log('-------------------------------------')
+   res.render('project', {
+       htmlResults,
+       logged_in: req.session.logged_in,
+   });
+})
 
 module.exports = router;
