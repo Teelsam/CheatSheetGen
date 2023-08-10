@@ -52,7 +52,7 @@
         </nav>
         {{/if}}
 
-        {{#if (ne current_page "home") }}
+        {{#if (and3 (ne current_page "home") (ne current_page "signup") (ne current_page "login") )}}
         <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <div class="navbar-header">
@@ -67,20 +67,7 @@
         </nav>
         {{/if}}
 
-        {{#if (ne current_page "login") }}
-        <nav class="navbar navbar-inverse">
-          <div class="container-fluid">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">CHEATSHEET</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-              <li><a href="#">JAVA SCRIPT</a></li>
-            </ul>
-          </div>
-        </nav>
-        {{/if}}
+        
         <!-- Conditionally render login or logout links-->
         {{#if logged_in}}
         <a href="/profile">profile</a> |

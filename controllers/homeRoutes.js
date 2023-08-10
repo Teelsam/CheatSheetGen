@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
       }));
 
       res.render('homepage', {
+         current_page: 'home',
          users,
          logged_in: req.session.logged_in,
       });
@@ -31,7 +32,7 @@ router.get('/', async (req, res) => {
 //    res.render('homepage');
 // });
 router.get('/signup', (req, res) => {
-   res.render('signup');
+   res.render('signup', { current_page: 'signup'});
 });
 
 router.get('/login', (req, res) => {
@@ -40,7 +41,7 @@ router.get('/login', (req, res) => {
       return;
    }
 
-   res.render('login');
+   res.render('login', {current_page: 'login'});
 });
 // router.get('/', (req, res) => {
 //    res.render('homepage', {current_page:"home"});
@@ -58,7 +59,7 @@ router.get('/login', (req, res) => {
 
 
 router.get('/main', (req, res) => {
-   res.render('project');
+   res.render('project', {current_page: 'project'});
 });
 
 module.exports = router;
