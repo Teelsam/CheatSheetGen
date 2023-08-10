@@ -17,8 +17,15 @@ CSS.init(
     CheatSheet_Cheats: {
       type: DataTypes.STRING,
     },
-    Creator_id: {
+    User_id: {
       type: DataTypes.INTEGER
     }
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'CSS',
   }
 );
+module.exports = CSS;
