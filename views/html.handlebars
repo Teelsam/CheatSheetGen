@@ -1,15 +1,21 @@
+
+
 {{#each htmlResults as |html|}}
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>title</th>
-      <th>code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{html.Cheatsheet_Name}}</td>
-      <td>{{html.Cheatsheet_Cheats}}</td>
-  </tbody>
-</table>
+
+<div class="col-sm-12">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{html.CheatSheet_Name}}</td>
+        <td>{{html.CheatSheet_Cheats}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {{/each}}
