@@ -24,3 +24,4 @@ CSS.belongsTo(User, {
 
 
 module.exports = { User, HTML, Javascript, CSS };
+
