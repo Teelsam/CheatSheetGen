@@ -14,4 +14,5 @@ router.get('/css', withAuth, async (req, res) => {
         cssResults,
         logged_in: req.session.logged_in,
     })
-})
+});
+module.exports = router;
