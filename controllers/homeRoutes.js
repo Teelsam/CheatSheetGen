@@ -3,7 +3,7 @@ const { User, HTML } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-   // try {
+   
       const userData = await User.findAll({
          attributes: { exclude: ['password'] },
          order: [['username', 'ASC']],
@@ -18,19 +18,11 @@ router.get('/', async (req, res) => {
          users,
          logged_in: req.session.logged_in,
       });
-//    } catch (err) {
-//       res.status(500).json(err);
-//    }
+
 });
 
 
-// router.get('/', (req, res) => {
-//    if (req.session.logged_in) {
-//       res.redirect('/homepage');
-//       return;
-//    }
-//    res.render('homepage');
-// });
+
 router.get('/signup', (req, res) => {
    res.render('signup', { current_page: 'signup'});
 });
@@ -43,22 +35,11 @@ router.get('/login', (req, res) => {
 
    res.render('login', {current_page: 'login'});
 });
-// router.get('/', (req, res) => {
-//    res.render('homepage', {current_page:"home"});
-
-//       res.render('homepage', {
-//          users,
-//          logged_in: req.session.logged_in,
-//       });
-//    } 
-// )
-// router.get('/login', (req, res) => {
-//    res.render('login', {current_page:"login"});
-// });
 
 
 
-router.get('/main', async (req, res) => {
+
+router.get('/html', async (req, res) => {
 
    const htmlData = await HTML.findAll({
        order: [['cheatSheet_id', 'ASC']],
@@ -67,10 +48,8 @@ router.get('/main', async (req, res) => {
        plain: true,
        
    }));
-   console.log('-------------------------------------')
-   console.log(htmlResults);
-   console.log('-------------------------------------')
-   res.render('project', {
+   
+   res.render('html', {
        htmlResults,
        logged_in: req.session.logged_in,
    });
