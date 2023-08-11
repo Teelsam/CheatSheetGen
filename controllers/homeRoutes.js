@@ -4,12 +4,6 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
 
-   
-      const userData = await User.findAll({
-         attributes: { exclude: ['password'] },
-         order: [['username', 'ASC']],
-      });
-  
    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['username', 'ASC']],
@@ -19,23 +13,19 @@ router.get('/', async (req, res) => {
       plain: true
    }));
 
-
-      res.render('homepage', {
-         current_page: 'home',
-         users,
-         logged_in: req.session.logged_in,
-      });
-
+   res.render('homepage', {
+      current_page: 'home',
+      users,
+      logged_in: req.session.logged_in,
+   });
 
    res.render('homepage', {
       current_page: 'home',
       users,
       logged_in: req.session.logged_in,
    });
-   
+
 });
-
-
 
 router.get('/signup', (req, res) => {
    res.render('signup', { current_page: 'signup' });
@@ -50,9 +40,6 @@ router.get('/login', (req, res) => {
    res.render('login', { current_page: 'login' });
 });
 
-
-
-
 router.get('/html', async (req, res) => {
 
    const htmlData = await HTML.findAll({
@@ -63,18 +50,15 @@ router.get('/html', async (req, res) => {
 
    }));
 
-   
-   res.render('html', {
-       htmlResults,
-       logged_in: req.session.logged_in,
 
-   res.render('project', {
+   res.render('html', {
       htmlResults,
       logged_in: req.session.logged_in,
 
    });
 });
-router.get('/css', withAuth, async (req, res) => {
+
+router.get('/css', async (req, res) => {
 
    const cssData = await CSS.findAll({
       order: [['cheatSheet_id', 'ASC']]
@@ -87,7 +71,8 @@ router.get('/css', withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
    })
 });
-router.get('/javascript', withAuth, async (req, res) => {
+
+router.get('/javascript', async (req, res) => {
    const jsData = await Javascript.findAll({
       order: [['cheatSheet_id', 'ASC']]
    });
@@ -98,5 +83,6 @@ router.get('/javascript', withAuth, async (req, res) => {
       jsResults,
       logged_in: req.session.logged_in,
    });
-})
+});
+
 module.exports = router;
