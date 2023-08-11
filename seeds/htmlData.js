@@ -13,6 +13,6 @@ const htmlData = [
         CheatSheet_Cheats: "Gives your websites tab a name",
         User_id: 2
     }
-]
+];
 const seedHtml = () => HTML.bulkCreate(htmlData);
 module.exports = seedHtml;

@@ -65,15 +65,17 @@ router.get('/css', async (req, res) => {
       order: [['cheatSheet_id', 'ASC']]
    });
    const cssResults = cssData.map((project) => project.get({
-      plain: true
+      plain: true,
    }));
+   console.log("===================")
+   console.log(cssResults)
    res.render('css', {
       cssResults,
       logged_in: req.session.logged_in,
    })
 });
 
-router.get('/javascript', async (req, res) => {
+router.get('/js', async (req, res) => {
    const jsData = await Javascript.findAll({
       order: [['cheatSheet_id', 'ASC']]
    });
