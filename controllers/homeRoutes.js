@@ -4,12 +4,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
 
-   
-      const userData = await User.findAll({
-         attributes: { exclude: ['password'] },
-         order: [['username', 'ASC']],
-      });
-  
+
    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['username', 'ASC']],
@@ -20,11 +15,11 @@ router.get('/', async (req, res) => {
    }));
 
 
-      res.render('homepage', {
-         current_page: 'home',
-         users,
-         logged_in: req.session.logged_in,
-      });
+   res.render('homepage', {
+      current_page: 'home',
+      users,
+      logged_in: req.session.logged_in,
+   });
 
 
    res.render('homepage', {
@@ -32,7 +27,7 @@ router.get('/', async (req, res) => {
       users,
       logged_in: req.session.logged_in,
    });
-   
+
 });
 
 
@@ -63,14 +58,11 @@ router.get('/html', async (req, res) => {
 
    }));
 
-   
-   res.render('html', {
-       htmlResults,
-       logged_in: req.session.logged_in,
 
-   res.render('project', {
+   res.render('html', {
       htmlResults,
       logged_in: req.session.logged_in,
+
 
    });
 });
