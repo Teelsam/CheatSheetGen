@@ -1,8 +1,32 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User } = require('../../models');
 
-router.post('login', async (req, res) => {
+router.post('/signup', async (req, res) => {
     try {
+        const { username, email, password } = req.body;
+
+        if (!username || !email || !password) {
+            return res.status(400).json({ error: 'Incomplete data' });
+        }
+
+        const newUser = await User.create({
+            username,
+            email,
+            password
+        });
+
+        res.status(201).json(newUser);
+
+    } catch (error) {
+        console.error('Error during signup:', error);
+        res.status(500).json({ error: 'An error occurred' });
+    }
+});
+
+
+router.post('/login', async (req, res) => {
+    try {
+        console.log('req.body: ', req.body)
         const userData = await User.findOne({ where: { email: req.body.email } });
 
         if (!userData) {
@@ -13,6 +37,7 @@ router.post('login', async (req, res) => {
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
+        console.log
 
         if (!validPassword) {
             res
@@ -34,13 +59,13 @@ router.post('login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-    if(req.session.logged_in){
-        req.session.destroy(()=>{
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
             res.status(204).end();
-    });
-}else{
-    res.status(404).end();
-}
+        });
+    } else {
+        res.status(404).end();
+    }
 });
 
 module.exports = router;
