@@ -5,8 +5,6 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
 
-
-
    const userData = await User.findAll({
       attributes: { exclude: ['password'] },
       order: [['username', 'ASC']],
@@ -47,7 +45,6 @@ router.get('/html', async (req, res) => {
       plain: true,
 
    }));
-
 
    res.render('html', {
       htmlResults,
