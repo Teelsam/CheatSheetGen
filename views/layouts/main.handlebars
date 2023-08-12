@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="/css/main.css">
   
   <link rel="stylesheet" href="/css/homepage.css">
@@ -25,7 +28,7 @@
       <h1>
 
 
-        <span role="img" aria-label="money"></span>
+       
         <a href="/">Cheetsheet</a>
 
       </h1>
@@ -61,6 +64,20 @@
         </nav>
         {{/if}}
 
+        {{#if (eq current_page "html")}}
+        <div class="col-sm-12">
+  <table class="table table-striped">
+       <thead>
+      <tr>
+        <th>title</th>
+        <th>code</th>
+      </tr>
+    </thead>
+    </table>
+    </div>
+
+      {{/if}}
+
         
         
         
@@ -74,8 +91,12 @@
       </nav>
     </header>
     <main class="container container-fluid mt-5">
+
+      
       <!-- Render the sub layout -->
       {{{ body }}}
+
+      
     </main>
     <footer>
 

@@ -3,9 +3,9 @@ main {
   }
 
 a {
-    font-style: bold;
-    font-size: 40px;
     
+    font-size: 69px;
+   
     color: rgb(12, 89, 53);
     
 }
@@ -16,25 +16,38 @@ a {
     background-color:rgb(102, 152, 127);
 }
 h1 {
+    font-family: 'Caprasimo', cursive;
+ 
     text-align: center;
+    margin: 0 auto;
+    text-shadow: rgb(120, 194, 97) 1px 0 10px;
+   
 }
 
 .navbar-inverse .navbar-brand {
     /* color: #9d9d9d; */
-    color: rgb(170, 180, 170);
+    color:black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 30px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
     /* color: #9d9d9d; */
-    color: rgb(171, 180, 171);
-    font-size: 20px
+    color: black;
+    font-size: 25px;
 }
 
-th {
-    text-align: left;
-    color: yellow;
+thead {
+
+    color:rgb(7, 175, 35);
+    padding-left: 10%;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    
 }
 td {
+    font-size:20px ;
 color:green;
 };
 

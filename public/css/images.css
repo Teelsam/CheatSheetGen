@@ -9,12 +9,12 @@
   .images img {
     width: 400px;
     height: 300px;
-    margin: 10px;
-    border: 2px solid brown;
+    margin: 20px;
+    border: 2px solid white;
     cursor:pointer;
-    border-radius: 10px;
+    border-radius: 15px;
     transition: 400ms;
-    box-shadow: 4px 7px 7px 4px red;
+    box-shadow: 4px 7px 7px 4px rgb(77, 184, 148);
   }
 
   .images img:hover {

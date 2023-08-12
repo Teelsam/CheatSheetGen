@@ -1,0 +1,20 @@
+.signup {
+ 
+    background-color:rgb(209, 233, 209);
+    color: white;
+    max-width: 900px;
+    
+    padding: 60px 50px 60px 50px;
+    
+    border-radius: 10px;
+    box-shadow:   0px 10px green;
+    margin-top: 50px;
+    margin-left: 260px;
+    align-items: center;
+}
+.btn-primary {
+
+    text-align: center;
+    background-color: GREEN;
+}
+
