@@ -52,7 +52,7 @@ router.get('/html', async (req, res) => {
    }));
 
 
-   res.render('html', {
+   res.render('project', {
       htmlResults,
       logged_in: req.session.logged_in,
 
@@ -69,7 +69,7 @@ router.get('/css', async (req, res) => {
    }));
    console.log("===================")
    console.log(cssResults)
-   res.render('css', {
+   res.render('project', {
       cssResults,
       logged_in: req.session.logged_in,
    })
@@ -82,7 +82,7 @@ router.get('/js', async (req, res) => {
    const jsResults = jsData.map((project) => project.get({
       plain: true,
    }));
-   res.render('jss', {
+   res.render('project', {
       jsResults,
       logged_in: req.session.logged_in,
    });
