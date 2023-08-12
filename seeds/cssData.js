@@ -2,17 +2,50 @@ const { CSS } = require('../models');
 
 const cssData = [
     {
-        cheatSheet_id: 1,
-        CheatSheet_Name: '<h1>',
-        CheatSheet_Cheats: "Header elements go from size 1-6",
+
+        CheatSheet_Name: 'Color:',
+        CheatSheet_Cheats: "Sets the color of that element",
         User_id: 1
     },
     {
-        cheatSheet_id: 2,
-        CheatSheet_Name: '<title>',
-        CheatSheet_Cheats: "Gives your websites tab a name",
+
+        CheatSheet_Name: 'background-color:',
+        CheatSheet_Cheats: "Sets the background color of that element",
         User_id: 2
-    }
+    },
+    {
+        CheatSheet_Name: 'font-weight',
+        CheatSheet_Cheats: "Sets the fonts boldness",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'font-size',
+        CheatSheet_Cheats: "Sets the fonts size",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'width',
+        CheatSheet_Cheats: "Sets the width of specified section",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'border-style',
+        CheatSheet_Cheats: "Sets the borders style",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'Padding',
+        CheatSheet_Cheats: "Sets the spacing inside a section",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'Margin',
+        CheatSheet_Cheats: "Sets the spacing outside the section",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'font-family',
+        CheatSheet_Cheats: "Sets the style of the font in the section",
+        User_id: 2
+    }, {
+        CheatSheet_Name: 'text-align',
+        CheatSheet_Cheats: "Sets which side text should be place in relation to the section",
+        User_id: 2
+    },
 
 ];
 
