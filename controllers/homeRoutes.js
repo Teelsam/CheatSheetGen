@@ -42,20 +42,16 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/html', async (req, res) => {
-
-   const htmlData = await HTML.findAll({
+const htmlData = await HTML.findAll({
       order: [['cheatSheet_id', 'ASC']],
    });
    const htmlResults = htmlData.map((project) => project.get({
       plain: true,
-
-   }));
-
-
-   res.render('project', {
+}));
+ res.render('project', {
       htmlResults,
       logged_in: req.session.logged_in,
-
+      current_page: 'html' ,
    });
 });
 
@@ -72,6 +68,7 @@ router.get('/css', async (req, res) => {
    res.render('project', {
       cssResults,
       logged_in: req.session.logged_in,
+      current_page: 'css' ,
    })
 });
 
@@ -85,6 +82,7 @@ router.get('/js', async (req, res) => {
    res.render('project', {
       jsResults,
       logged_in: req.session.logged_in,
+      current_page: 'js' ,
    });
 });
 
