@@ -1,0 +1,23 @@
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .images img {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    border: 2px solid brown;
+    cursor:pointer;
+    border-radius: 10px;
+    transition: 400ms;
+    box-shadow: 4px 7px 7px 4px red;
+  }
+
+  .images img:hover {
+    filter: grayscale(1);
+    transform: scale(1.03);
+  }

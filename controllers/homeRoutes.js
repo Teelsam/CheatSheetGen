@@ -14,13 +14,11 @@ router.get('/', async (req, res) => {
       plain: true
    }));
 
-
    res.render('homepage', {
       current_page: 'home',
       users,
       logged_in: req.session.logged_in,
    });
-
 });
 
 router.get('/signup', (req, res) => {
@@ -37,20 +35,16 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/html', async (req, res) => {
-
-   const htmlData = await HTML.findAll({
+const htmlData = await HTML.findAll({
       order: [['cheatSheet_id', 'ASC']],
    });
    const htmlResults = htmlData.map((project) => project.get({
       plain: true,
-
-   }));
-
-   res.render('html', {
+}));
+ res.render('project', {
       htmlResults,
       logged_in: req.session.logged_in,
-
-
+      current_page: 'html' ,
    });
 });
 
@@ -60,24 +54,28 @@ router.get('/css', async (req, res) => {
       order: [['cheatSheet_id', 'ASC']]
    });
    const cssResults = cssData.map((project) => project.get({
-      plain: true
+      plain: true,
    }));
-   res.render('css', {
+   console.log("===================")
+   console.log(cssResults)
+   res.render('project', {
       cssResults,
       logged_in: req.session.logged_in,
+      current_page: 'css' ,
    })
 });
 
-router.get('/javascript', async (req, res) => {
+router.get('/js', async (req, res) => {
    const jsData = await Javascript.findAll({
       order: [['cheatSheet_id', 'ASC']]
    });
    const jsResults = jsData.map((project) => project.get({
       plain: true,
    }));
-   res.render('jss', {
+   res.render('project', {
       jsResults,
       logged_in: req.session.logged_in,
+      current_page: 'js' ,
    });
 });
 

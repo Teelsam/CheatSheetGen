@@ -2,15 +2,17 @@ const { CSS } = require('../models');
 
 const cssData = [
     {
-        CheatSheet_Name: '#id',
-        CHeatSheet_Cheats: "# and then the name of the HTML id allows you to style specific element",
+        cheatSheet_id: 1,
+        CheatSheet_Name: '<h1>',
+        CheatSheet_Cheats: "Header elements go from size 1-6",
         User_id: 1
     },
     {
-        CheatSheet_Name: '::hover',
-        CheatSheet_Cheats: "hover gives a second set of styles to an element which is changed when the mouse hovers over it",
+        cheatSheet_id: 2,
+        CheatSheet_Name: '<title>',
+        CheatSheet_Cheats: "Gives your websites tab a name",
         User_id: 2
-    },
+    }
 
 ];
 

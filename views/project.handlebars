@@ -1,6 +1,30 @@
 {{#each htmlResults as |html|}}
 
 <div class="col-sm-12">
+  
+  <table class="table table-striped">
+    
+    <thead>
+      
+      <tr>
+        <th>TITLE</th>
+        <th>CODE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{html.CheatSheet_Name}}</td>
+        <td>{{html.CheatSheet_Cheats}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{{/each}}
+
+{{#each cssResults as |cs|}}
+
+<div class="col-sm-12">
   <table class="table table-striped">
     <thead>
       <tr>
@@ -10,8 +34,28 @@
     </thead>
     <tbody>
       <tr>
-        <td>{{html.CheatSheet_Name}}</td>
-        <td>{{html.CheatSheet_Cheats}}</td>
+        <td>{{cs.CheatSheet_Name}}</td>
+        <td>{{cs.CheatSheet_Cheats}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+{{/each}}
+
+{{#each jsResults as |js|}}
+
+<div class="col-sm-12">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>title</th>
+        <th>code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{js.CheatSheet_Name}}</td>
+        <td>{{js.CheatSheet_Cheats}}</td>
       </tr>
     </tbody>
   </table>
