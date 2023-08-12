@@ -28,6 +28,7 @@ router.post('/login', async (req, res) => {
     try {
         console.log('req.body: ', req.body)
         const userData = await User.findOne({ where: { email: req.body.email } });
+        console.log(userData);
 
         if (!userData) {
             res
@@ -37,7 +38,7 @@ router.post('/login', async (req, res) => {
         }
 
         const validPassword = await userData.checkPassword(req.body.password);
-        console.log
+        console.log(validPassword);
 
         if (!validPassword) {
             res
@@ -50,10 +51,11 @@ router.post('/login', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.json({ user: userData, message: 'Logged in!' });
+            res.json({ user: userData, message: 'Logged in!', sessionInfo: req.session });
         });
 
     } catch (err) {
+        console.log("err: ", err.message);
         res.status(400).json(err);
     }
 });
@@ -61,6 +63,7 @@ router.post('/login', async (req, res) => {
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
+            res.json({message: "Sucessfully Logged Out!"});
             res.status(204).end();
         });
     } else {
