@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/css/signup.css">
 
 
-  <title>Cheetsheet</title>
+  <title>Cheatsheet</title>
   <main>
 
 
@@ -29,7 +29,7 @@
 
 
        
-        <a href="/">Cheetsheet</a>
+        <a href="/">Cheatsheet</a>
 
       </h1>
       <nav>
@@ -41,10 +41,17 @@
             </div>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+
+              {{#if logged_in}}
+              <li><a  id="logout" href="#"><span class="glyphicon glyphicon-user"></span> Logout</a>
+              </li>
+              {{else}}
               <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
               </li>
               <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul>
+           
+           {{/if}} 
+           </ul>
           </div>
         </nav>
         {{/if}}
@@ -60,34 +67,17 @@
               <li><a href="/css">CSS</a></li>
               <li><a href="/js">JAVA SCRIPT</a></li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+              {{#if logged_in}}
+              <li><a  id="logout" href="#"><span class="glyphicon glyphicon-user"></span> Logout</a>
+              </li>
+              {{/if}}
+            </ul>
           </div>
         </nav>
         {{/if}}
-
-        {{#if (eq current_page "html")}}
-        <div class="col-sm-12">
-  <table class="table table-striped">
-       <thead>
-      <tr>
-        <th>title</th>
-        <th>code</th>
-      </tr>
-    </thead>
-    </table>
-    </div>
-
-      {{/if}}
-
+<!-- Conditionally render login or logout links-->
         
-        
-        
-        <!-- Conditionally render login or logout links-->
-        {{#if logged_in}}
-        <a href="/homepage"></a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login"></a>
-        {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">

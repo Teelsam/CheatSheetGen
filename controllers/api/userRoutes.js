@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 router.post('/signup', async (req, res) => {
+    console.log(req.body)
     try {
         const { username, email, password } = req.body;
 
