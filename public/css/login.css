@@ -19,7 +19,7 @@ label {
 .login {
  
     background-color:rgb(209, 233, 209);
- 
+    color: black;
     max-width: 800px;
     margin: 0 auto;
     padding: 60px 50px 60px 50px;
