@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { User, HTML, CSS, Javascript } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
 res.render('homepage', {
       current_page: 'home',
       logged_in: req.session.logged_in,
@@ -23,7 +23,7 @@ router.get('/login', (req, res) => {
    res.render('login', { current_page: 'login' });
 });
 
-router.get('/html', async (req, res) => {
+router.get('/html',withAuth, async (req, res) => {
 const htmlData = await HTML.findAll({
       order: [['cheatSheet_id', 'ASC']],
    });
@@ -37,7 +37,7 @@ const htmlData = await HTML.findAll({
    });
 });
 
-router.get('/css', async (req, res) => {
+router.get('/css',withAuth, async (req, res) => {
 
    const cssData = await CSS.findAll({
       order: [['cheatSheet_id', 'ASC']]
@@ -54,7 +54,7 @@ router.get('/css', async (req, res) => {
    })
 });
 
-router.get('/js', async (req, res) => {
+router.get('/js',withAuth, async (req, res) => {
    const jsData = await Javascript.findAll({
       order: [['cheatSheet_id', 'ASC']]
    });
