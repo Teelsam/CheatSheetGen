@@ -1,33 +1,40 @@
 main {
     display: block;
-  }
+}
+
+p {
+
+    font-size: 69px;
+
+    color: rgb(12, 89, 53);
+}
 
 a {
-    
-    font-size: 69px;
-   
-    color: rgb(12, 89, 53);
-    
+    color: white;
 }
 
-
+a:hover {
+    color: white;
+    text-decoration: none;
+}
 
 .navbar-inverse {
-    background-color:rgb(102, 152, 127);
+    background-color: rgb(102, 152, 127);
 }
+
 h1 {
     font-family: 'Caprasimo', cursive;
- 
+
     text-align: center;
     margin: 0 auto;
     text-shadow: rgb(120, 194, 97) 1px 0 10px;
-   
+
 }
 
 .navbar-inverse .navbar-brand {
     /* color: #9d9d9d; */
-    color:black;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 30px;
 }
 
@@ -39,16 +46,17 @@ h1 {
 
 thead {
 
-    color:rgb(7, 175, 35);
+    color: rgb(7, 175, 35);
     padding-left: 10%;
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-    
+
 }
+
 td {
-    font-size:20px ;
-color:green;
-};
+    font-size: 20px;
+    color: green;
+}
 
-
+;
