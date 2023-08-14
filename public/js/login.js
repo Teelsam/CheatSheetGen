@@ -16,8 +16,8 @@ const loginForm = async (event) => {
             console.log(response);
         }
         else {
-            //alert('please signup first to create an account')
-            //res.redirect('signup')
+            alert('please signup first to create an account')
+            res.redirect('signup')
             document.location.replace('signup');
         }
     }
