@@ -3,7 +3,7 @@ const router = require('express').Router();
 const { User, HTML, CSS, Javascript } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
 res.render('homepage', {
       current_page: 'home',
       logged_in: req.session.logged_in,
@@ -66,6 +66,10 @@ router.get('/js', async (req, res) => {
       logged_in: req.session.logged_in,
       current_page: 'js' ,
    });
+});
+
+router.get('/addrefrence', (req, res) => {
+   res.render('addrefrence', { current_page: 'addrefrence' });
 });
 
 module.exports = router;

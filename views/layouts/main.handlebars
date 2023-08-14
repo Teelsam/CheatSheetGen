@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=PT+Sans&display=swap" rel="stylesheet">
@@ -67,6 +68,17 @@
               <li><a href="/css">CSS</a></li>
               <li><a href="/js">JAVA SCRIPT</a></li>
             </ul>
+          <!-- <div class="dropdown"> -->
+  <button class="btn btn-primary check dropdown-toggle" type="button" data-toggle="dropdown">Add refrence
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu dropdown-menu-right">
+    <li><a href="/addrefrence">HTML</a></li>
+    <li><a href="/addrefrence">CSS</a></li>
+    <li><a href="/addrefrence">JavaScript</a></li>
+  </ul>
+
+
+
             <ul class="nav navbar-nav navbar-right">
               {{#if logged_in}}
               <li><a  id="logout" href="#"><span class="glyphicon glyphicon-user"></span> Logout</a>
@@ -97,6 +109,9 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 
 </html>

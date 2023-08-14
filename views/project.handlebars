@@ -1,3 +1,15 @@
+ {{#if htmlResults as |html|}}
+<h3>HTML CHEATSHEET</h3>
+{{/if}}
+
+{{#if cssResults as |cs|}}
+<h3>CSS CHEATSHEET</h3>
+{{/if}}
+
+ {{#if jsResults as |cs|}}
+<h3>JAVASCRIPT CHEATSHEET</h3>
+{{/if}}
+
 <div class="col-sm-12">
   <table class="table table-striped">
     <tbody>
@@ -8,31 +20,24 @@
       </tr>
     </thead>
       {{#each htmlResults as |html|}}
-
-
-      <tr>
+       <tr>
         <td>{{html.CheatSheet_Name}}</td>
         <td>{{html.CheatSheet_Cheats}}</td>
       </tr>
+     {{/each}}
 
-      {{/each}}
       {{#each cssResults as |cs|}}
-
       <tr>
         <td>{{cs.CheatSheet_Name}}</td>
         <td>{{cs.CheatSheet_Cheats}}</td>
       </tr>
-
       {{/each}}
 
       {{#each jsResults as |js|}}
-
-
       <tr>
         <td>{{js.CheatSheet_Name}}</td>
         <td>{{js.CheatSheet_Cheats}}</td>
       </tr>
-
       {{/each}}
     </tbody>
   </table>
