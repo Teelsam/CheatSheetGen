@@ -4,10 +4,17 @@
 
 
 ## Table of Contents
--[Description](#description)
--[Usage](#usage)
--[Questions](#questions)
--[References](#references)
+* [Description](#desciption)
+
+* [Usage](#usage)
+
+* [Technologies](#technologies)
+
+* [Contributing](#contributing)
+
+* [Questions](#questions)
+
+* [References](#references)
 
 ## Description 
 
@@ -17,7 +24,25 @@ Here our group _Cosy-Coders_ have assembled only the most intriguing, esoteric a
 ## Usage
 
 Opening the sites url you are asked to create an account, once created, login and explore the sites subcontents by catagory, HTML hints, CSS tricks and JavaScript clues! 
+
+## Contributing
+[Sam Teel](https://github.com/Teelsam)  
+
+[Kaur Kirandeep](https://github.com/MK0999)  
+
+[Emmanuel Appiagyei](https://github.com/WDverse)
+
+## Technologies
+Bootstrap  
+
+Handlebars  
+
+Node Package Manager
+
 ## Questions
+
 [The GitHub Repo](https://github.com/Teelsam/CheatSheetGen)
+
 ## References 
+
 [Handlebars.js](https://handlebarsjs.com/)
