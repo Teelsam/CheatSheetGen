@@ -13,7 +13,7 @@ The Cozy-Coders
 
 * [Contributing](#contributing)
 
-* [Programs/Packages](#programs/packages)
+* [Packages](#packages)
 
 * [Questions](#questions)
 
@@ -36,20 +36,32 @@ Opening the sites url you are asked to create an account, once created, login an
 
 [Emmanuel Appiagyei](https://github.com/WDverse)
  
-## Programs/Packages
+## Packages
 
-NPM Packages:
-    bcrypt: 5.1.0,
-    bootstrap: 5.3.1,
-    connect-session-sequelize: 7.1.7,
-    dotenv: 16.3.1,
-    eslint: 8.46.0,
-    express: 4.18.2,
-    express-handlebars: 7.1.1,
-    express-session: 1.17.3,
-    mysql2: 3.5.2
-    nodemon: 3.0.1
-    sequelize: 6.32.1
+NPM Packages:  
+
+    bcrypt: 5.1.0,  
+
+    bootstrap: 5.3.1,  
+
+    connect-session-sequelize: 7.1.7,  
+
+    dotenv: 16.3.1,  
+
+    eslint: 8.46.0,  
+
+    express: 4.18.2,  
+
+    express-handlebars: 7.1.1,  
+
+    express-session: 1.17.3,  
+
+    mysql2: 3.5.2  
+
+    nodemon: 3.0.1  
+
+    sequelize: 6.32.1  
+    
 
 ## Questions
 
