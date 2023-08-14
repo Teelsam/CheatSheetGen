@@ -4,12 +4,20 @@
 
 ## Team Name
 The Cozy-Coders
+
 ## Table of Contents
 
--[Description](#description)
--[Usage](#usage)
--[Questions](#questions)
--[References](#references)
+* [Description](#desciption)
+
+* [Usage](#usage)
+
+* [Contributing](#contributing)
+
+* [Programs/Packages](#programs/packages)
+
+* [Questions](#questions)
+
+* [References](#references)
 
 ## Description 
 
@@ -20,7 +28,16 @@ Here our group _Cozy-Coders_ have assembled only the most intriguing, esoteric a
 
 Opening the sites url you are asked to create an account, once created, login and explore the sites subcontents by catagory, HTML hints, CSS tricks and JavaScript clues! 
 
+## Contributing
+
+[Sam Teel](https://github.com/Teelsam)  
+
+[Kaur Kirandeep](https://github.com/MK0999)  
+
+[Emmanuel Appiagyei](https://github.com/WDverse)
+ 
 ## Programs/Packages
+
 NPM Packages:
     bcrypt: 5.1.0,
     bootstrap: 5.3.1,
@@ -34,9 +51,10 @@ NPM Packages:
     nodemon: 3.0.1
     sequelize: 6.32.1
 
-
-
 ## Questions
+
 [The GitHub Repo](https://github.com/Teelsam/CheatSheetGen)
+
 ## References 
+
 [Handlebars.js](https://handlebarsjs.com/)
