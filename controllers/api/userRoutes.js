@@ -1,15 +1,21 @@
+// Import express library and create a router instance.
 const router = require('express').Router();
+
+// Import the User model.
 const { User } = require('../../models');
 
+// Route to handle user signup.
 router.post('/signup', async (req, res) => {
-    console.log(req.body)
+    console.log(req.body);
     try {
         const { username, email, password } = req.body;
 
+        // Check if required data is provided.
         if (!username || !email || !password) {
             return res.status(400).json({ error: 'Incomplete data' });
         }
 
+        // Create a new user using the User model.
         const newUser = await User.create({
             username,
             email,
@@ -24,30 +30,31 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-
+// Route to handle user login.
 router.post('/login', async (req, res) => {
     try {
-        console.log('req.body: ', req.body)
+        console.log('req.body: ', req.body);
+        // Find a user based on the provided email.
         const userData = await User.findOne({ where: { email: req.body.email } });
         console.log(userData);
 
         if (!userData) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, try again' });
+            // Return an error response if the user is not found.
+            res.status(400).json({ message: 'Incorrect email or password, try again' });
             return;
         }
 
+        // Check if the provided password matches the user's stored password.
         const validPassword = await userData.checkPassword(req.body.password);
         console.log(validPassword);
 
         if (!validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect email or password, try again' });
+            // Return an error response if the password is incorrect.
+            res.status(400).json({ message: 'Incorrect email or password, try again' });
             return;
         }
 
+        // Save user session information and send a success response.
         req.session.save(() => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
@@ -61,10 +68,12 @@ router.post('/login', async (req, res) => {
     }
 });
 
+// Route to handle user logout.
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
+        // Destroy the session upon successful logout.
         req.session.destroy(() => {
-            res.json({message: "Sucessfully Logged Out!"});
+            res.json({ message: "Successfully Logged Out!" });
             res.status(204).end();
         });
     } else {
@@ -72,4 +81,5 @@ router.post('/logout', (req, res) => {
     }
 });
 
+// Export the router to be used by the main application.
 module.exports = router;
