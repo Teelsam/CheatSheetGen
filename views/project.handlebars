@@ -1,31 +1,38 @@
- {{#if htmlResults as |html|}}
+<!-- Check if there are HTML cheatsheet results -->
+{{#if htmlResults as |html|}}
 <h3>HTML CHEATSHEET</h3>
 {{/if}}
 
+<!-- Check if there are CSS cheatsheet results -->
 {{#if cssResults as |cs|}}
 <h3>CSS CHEATSHEET</h3>
 {{/if}}
 
- {{#if jsResults as |cs|}}
+<!-- Check if there are JavaScript cheatsheet results -->
+{{#if jsResults as |cs|}}
 <h3>JAVASCRIPT CHEATSHEET</h3>
 {{/if}}
 
+<!-- Table to display cheatsheet data -->
 <div class="col-sm-12">
   <table class="table table-striped">
     <tbody>
-       <thead>
-      <tr>
-        <th>TITLE</th>
-        <th>REFRENCE</th>
-      </tr>
-    </thead>
+      <thead>
+        <tr>
+          <th>TITLE</th>
+          <th>REFRENCE</th>
+        </tr>
+      </thead>
+
+      <!-- Iterate through HTML cheatsheet results -->
       {{#each htmlResults as |html|}}
-       <tr>
+      <tr>
         <td>{{html.CheatSheet_Name}}</td>
         <td>{{html.CheatSheet_Cheats}}</td>
       </tr>
-     {{/each}}
+      {{/each}}
 
+      <!-- Iterate through CSS cheatsheet results -->
       {{#each cssResults as |cs|}}
       <tr>
         <td>{{cs.CheatSheet_Name}}</td>
@@ -33,6 +40,7 @@
       </tr>
       {{/each}}
 
+      <!-- Iterate through JavaScript cheatsheet results -->
       {{#each jsResults as |js|}}
       <tr>
         <td>{{js.CheatSheet_Name}}</td>

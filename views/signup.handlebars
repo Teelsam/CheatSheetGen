@@ -1,30 +1,42 @@
 <div class="col-md-6 signup">
+  <!-- Signup form container -->
   <div class="col-md-6">
-
+    <!-- Heading for Signup form -->
     <h2>Signup</h2>
 
+    <!-- Signup form -->
     <form class="form signup-form">
+      <!-- Input field for Name -->
       <div class="form-group">
         <label for="name-signup">Name:</label>
         <input class="form-input" type="text" id="name-signup" />
       </div>
+
+      <!-- Input field for Email -->
       <div class="form-group">
         <label for="email-signup">email:</label>
         <input class="form-input" type="text" id="email-signup" />
       </div>
+
+      <!-- Input field for Password -->
       <div class="form-group">
         <label for="password-signup">password:</label>
         <input class="form-input" type="password" id="password-signup" />
       </div>
+
+      <!-- Button to submit the Signup form -->
       <div class="form-group">
-        <button class="btn btn-primary" type="submit">Signup</button> 
-        {{!-- <button class="btn btn-primary" type="submit"><a href="/login">Login</a></button> --}}
+        <button class="btn btn-primary" type="submit">Signup</button>
       </div>
+
+      <!-- Message for existing users to navigate to login page -->
       <div class="login-text">
-      <p class="login-text"> If account already exist please <a href="/login" class="signup-link"> login</a> here</p>
-    </div>
+        <p class="login-text"> If an account already exists, please <a href="/login" class="signup-link">login</a> here
+        </p>
+      </div>
     </form>
   </div>
 </div>
 
+<!-- Include JavaScript script for Signup functionality -->
 <script src="./js/signup.js"></script>
