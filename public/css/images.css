@@ -1,23 +1,27 @@
-
+/* Apply styles to element with class = images */
 .images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-  .images img {
-    width: 400px;
-    height: 300px;
-    margin: 20px;
-    border: 2px solid white;
-    cursor:pointer;
-    border-radius: 15px;
-    transition: 400ms;
-    box-shadow: 4px 7px 7px 4px rgb(77, 184, 148);
-  }
+/* Apply styles to individual images within the element with class = images */
+.images img {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 400ms;
+  box-shadow: 4px 7px 7px 4px rgb(77, 184, 148);
+}
 
-  .images img:hover {
-    filter: grayscale(1);
-    transform: scale(1.03);
-  }
+/* Apply styles to images within an element with class = images when hovered */
+.images img:hover {
+  /* Apply grayscale effect */
+  filter: grayscale(1);
+  /* Slightly scale up the image */
+  transform: scale(1.03);
+}

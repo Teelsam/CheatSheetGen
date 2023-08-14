@@ -1,20 +1,25 @@
 <div class="container">
-  <h2>ADD REFRENCE</h2>
-  <form class="form-horizontal" action="/action_page.php">
+  <h2>ADD REFERENCE</h2>
+  <form class="form-horizontal" action="/action_page.php" method="POST">
+
+    <!-- Input field for the title of the reference -->
     <div class="form-group">
       <label class="control-label col-sm-2 title" >TITLE:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="email" placeholder="Add Title for Cheatsheet" name="text">
+        <input type="text" class="form-control" id="title" placeholder="Add Title for Cheatsheet" name="title">
       </div>
     </div>
+
+    <!-- Input field for the content of the reference -->
     <div class="form-group">
-      <label class="control-label col-sm-2 refrence" >REFRENCE:</label>
+      <label class="control-label col-sm-2" for="pwd">REFRENCE:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  placeholder="Add Refrence for Cheatsheet" name ="text">
+        <input type="password" class="form-control" id="pwd" placeholder="Add Refrence for Cheatsheet" name="pwd">
       </div>
     </div>
-   
-    <div class="form-group">        
+
+    <!-- Submit button -->
+    <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default"><a href="/api/cheatsheet/html">Submit</a></button>
       </div>

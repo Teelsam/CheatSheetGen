@@ -1,9 +1,11 @@
+// Import required modules and set up the CSS model using Sequelize.
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Define the CSS model class.
 class CSS extends Model { }
 
-
+// Initialize the CSS model with its properties.
 CSS.init(
   {
     cheatSheet_id: {
@@ -23,9 +25,11 @@ CSS.init(
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'CSS',
+    freezeTableName: true,   // Ensure that the table name matches the model name.
+    underscored: true,       // Use snake_case for column names.
+    modelName: 'CSS',        // Set the model name in singular form.
   }
 );
+
+// Export the CSS model to be used in other parts of the application.
 module.exports = CSS;

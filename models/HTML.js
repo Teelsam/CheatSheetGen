@@ -1,9 +1,11 @@
+// Import required modules and set up the HTML model using Sequelize.
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Define the HTML model class.
 class HTML extends Model { }
 
-
+// Initialize the HTML model with its properties.
 HTML.init(
   {
     cheatSheet_id: {
@@ -23,9 +25,11 @@ HTML.init(
   },
   {
     sequelize,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'HTML',
+    freezeTableName: true,   // Ensure that the table name matches the model name.
+    underscored: true,       // Use snake_case for column names.
+    modelName: 'HTML',       // Set the model name in singular form.
   }
 );
+
+// Export the HTML model to be used in other parts of the application.
 module.exports = HTML;
