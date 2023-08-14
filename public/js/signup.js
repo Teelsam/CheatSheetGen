@@ -14,7 +14,7 @@ const signup = async (event) => {
             document.location.replace('/');
         }
         else {
-            alert(response.statusText)
+            alert(response.status)
         }
 
     }
