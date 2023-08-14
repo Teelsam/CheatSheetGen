@@ -16,7 +16,7 @@ const loginForm = async (event) => {
             console.log(response);
         }
         else {
-            alert('please signup first to create an account')
+            alert('Account doesnot exit please signup first')
             res.redirect('signup')
             document.location.replace('signup');
         }

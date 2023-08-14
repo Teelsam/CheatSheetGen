@@ -34,3 +34,12 @@ label {
     background-color: GREEN;
 }
 
+.login-text {
+    font-size: 15px;
+    color: black;
+}
+.signup-link {
+    color: blue;
+
+}
+
