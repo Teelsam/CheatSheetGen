@@ -7,7 +7,7 @@ let sequelize; // Declare a variable for holding the Sequelize instance.
 
 // Check if the JAWSDB_URL environment variable is set, indicating a production environment.
 if (process.env.JAWSDB_URL) {
-  Sequelize = new Sequelize(process.env.JAWSDB_URL);
+  sequelize = new Sequelize(process.env.JAWSDB_URL);
 }
 else {
   // Create a Sequelize instance using the provided configuration.
