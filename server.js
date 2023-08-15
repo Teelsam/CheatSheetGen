@@ -7,8 +7,8 @@ const routes = require('./controllers'); // Import route handlers
 const helpers = require('./utils/helpers'); // Import custom Handlebars helpers
 
 // Create an instance of the Express application
-const app = express();
 const PORT = process.env.PORT || 3001; // Define the port to listen on
+const app = express();
 
 // Create an instance of Handlebars with custom helpers
 const hbs = exphbs.create({ helpers });
@@ -51,3 +51,4 @@ sequelize.sync({ force: false }).then(() => {
         console.log(`Now listening on ${PORT}`);
     });
 });
+module.exports = app;
