@@ -64,6 +64,11 @@ const jsData = [
         CheatSheet_Cheats: "A variable with ++ increases that variables value by 1",
         User_id: 1
     },
+    {
+        CheatSheet_Name: 'fetch',
+        CheatSheet_Cheats: "function fetches content from a server",
+        User_id: 2
+    },
 
 ];
 

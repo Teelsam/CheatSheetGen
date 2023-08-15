@@ -64,6 +64,16 @@ const htmlData = [
         CheatSheet_Cheats: "Element creates a section for linking to sites pages",
         User_id: 2
     },
+    {
+        CheatSheet_Name: '<button>',
+        CheatSheet_Cheats: "Element creates a clickable button ",
+        User_id: 2
+    },
+    {
+        CheatSheet_Name: '<code>',
+        CheatSheet_Cheats: "Element defines a text as code",
+        User_id: 2
+    },
 ];
 // Define a function to seed the HTML data into the database
 const seedHtml = () => HTML.bulkCreate(htmlData);
