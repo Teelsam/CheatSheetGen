@@ -62,6 +62,11 @@ const cssData = [
         CheatSheet_Cheats: "Sets which side text should be place in relation to the section",
         User_id: 2
     },
+    {
+        CheatSheet_Name: 'Visibiliy',
+        CheatSheet_Cheats: "Sets if the content can be seen",
+        User_id: 2
+    },
 
 ];
 // Define a function to seed the CSS data into the database
