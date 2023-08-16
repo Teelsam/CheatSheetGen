@@ -21,7 +21,7 @@ The Cozy-Coders
 
 ## Description 
 
-Here our group _Cozy-Coders_ have assembled only the most intriguing, esoteric and most importantly coveted facts about web development that any soul, living or dead, would want to encounter. How did we manage this feat of human ingenuity? Through burdensome trials and scourring of sites and sites of documentation. All these hurdles we eagerly surmounted and surpassed. Here our site asks the user to log in to see the treature troves of cheatsheet, hints, clues small and large about how you too can learn to create a website. 
+Here our group _Cozy-Coders_ have assembled only the most intriguing, esoteric and most importantly, coveted facts about web development that any soul, living or dead, would want to encounter. How did we manage this feat of human ingenuity? Through burdensome trials and scourring of  info sites and sites of documentation. All these hurdles we eagerly surmounted and surpassed. Here our site asks the user to log in to see the treature troves of cheatsheet, hints, and clues small and large about how you too can learn to create a website. 
 
 
 ## Usage
