@@ -7,8 +7,6 @@
 ## Team Name
 The Cozy-Coders
 
-## ScreenShot 
-![Screenshot](./images/liveSiteScreenShot.png)
 ## Table of Contents
 
 * [Description](#desciption)
@@ -31,6 +29,8 @@ Here our group _Cozy-Coders_ have assembled only the most intriguing, esoteric a
 ## Usage
 
 Opening the sites url you are asked to create an account, once created, login and explore the sites subcontents by catagory, HTML hints, CSS tricks and JavaScript clues! 
+
+![Screenshot](./images/liveSiteScreenShot.png)
 
 ## Contributing
 
