@@ -19,7 +19,7 @@ const htmlData = [
 
     {
         CheatSheet_Name: 'HTML',
-        CheatSheet_Cheats: "Stands for Hyper Text Markup Lnaguage",
+        CheatSheet_Cheats: "Stands for Hyper Text Markup Language",
         User_id: 2
     },
 
