@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node server.js",
     "lint": "eslint **/*.js",
-    "seed": "node seeds/index.js"
+    "seed": "cd server && npm run seed"
   },
   "name": "project2",
   "description": "[link to project management board](https://github.com/users/Teelsam/projects/1/views/1)",
